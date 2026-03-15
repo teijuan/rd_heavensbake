@@ -3,3 +3,24 @@ description: The haven of furry fantasies.
 baseurl: ""
 url: ""
 theme: minima
+
+collections_dir: collections
+collections:
+  affiliates:
+    output: true
+    permalink: /:slug
+  rd:
+    output: true
+    permalink: /:slug
+
+defaults:
+  - scope:
+      path: "_affiliates"
+      type: "affiliates"
+    values:
+      layout: "af"
+  - scope:
+      path: "_rd"
+      type: "rd"
+    values:
+      layout: "rd"
